@@ -75,7 +75,7 @@ def get_state_code(tweet):
         state_code_re = re.compile(r'\b{}\b'.format(re.escape(state_code)))
         state_name_re = \
             re.compile(r'\b{}\b'.format(re.escape(state_name)), re.IGNORECASE)
-        if state_code_re.match(location) or state_name_re.match(location):
+        if state_code_re.search(location) or state_name_re.search(location):
             return state_code
     return None
 
