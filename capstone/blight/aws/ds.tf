@@ -107,3 +107,7 @@ resource "aws_security_group" "ds" {
 output "ssh" {
   value = "${var.ssh_user}@${aws_spot_instance_request.ds.public_ip}"
 }
+
+output "instance_id" {
+  value = "${aws_spot_instance_request.ds.spot_instance_id}"
+}
